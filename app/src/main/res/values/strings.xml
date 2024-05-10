@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name" translatable="false">VKPokemonApp</string>
+    <string name="try_again" translatable="false">Try again!</string>
+    <string name="list_screen_error" translatable="false">Something went wrong</string>
+    <string name="back_to_list">Back to list</string>
+    <string name="ef_title">+%1$d EVs</string>
+</resources>

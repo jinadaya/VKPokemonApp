@@ -1,0 +1,21 @@
+package com.example.royaal.vkpokemonapp.models.domain
+
+data class PokemonDTO(
+    val name: String,
+    val id: Int,
+    val defaultPoster: String?,
+    val shinyPoster: String?,
+    val isOwned: Boolean,
+    val stats: StatsDTO,
+) {
+    companion object {
+        val placeholder = PokemonDTO(
+            name = "???",
+            id = -1,
+            defaultPoster = null,
+            shinyPoster = null,
+            isOwned = false,
+            stats = StatsDTO.placeholder
+        )
+    }
+}
