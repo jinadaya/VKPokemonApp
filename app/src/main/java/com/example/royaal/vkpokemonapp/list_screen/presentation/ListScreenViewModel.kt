@@ -40,13 +40,6 @@ class ListScreenViewModel @Inject constructor(
         viewModelScope.launch {
             when (wish) {
                 ListScreenWish.RequestForNewPokemons -> pokemonMainRepository.requestMorePokemons()
-                    .also {
-                        _state.update {
-                            it.copy(
-                                loadingState = LoadingState.Loading,
-                            )
-                        }
-                    }
 
                 is ListScreenWish.SetPokemonAsOwned -> pokemonMainRepository.changePokemonStatus(
                     id = wish.id,
