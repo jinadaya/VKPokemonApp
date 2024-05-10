@@ -26,8 +26,11 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -46,6 +49,7 @@ fun SharedTransitionScope.DetailsScreenSuccess(
     animatedVisibilityScope: AnimatedVisibilityScope,
     onBackClick: () -> Unit,
 ) {
+    var isNotClicked by remember { mutableStateOf(true) }
     val scope = rememberCoroutineScope()
     val showShiny = remember { Animatable(0f) }
     val initColor = MaterialTheme.colorScheme.primary
@@ -123,7 +127,12 @@ fun SharedTransitionScope.DetailsScreenSuccess(
         Button(
             modifier = Modifier
                 .fillMaxWidth(0.8f),
-            onClick = onBackClick
+            onClick = {
+                if (isNotClicked) {
+                    isNotClicked = false
+                    onBackClick()
+                }
+            }
         ) {
             Text(
                 text = stringResource(id = R.string.back_to_list),
