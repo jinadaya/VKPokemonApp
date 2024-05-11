@@ -5,6 +5,7 @@ import com.example.royaal.domain.PokemonMainRepository
 import dagger.Binds
 import dagger.Module
 
+@Suppress("unused")
 @Module
 interface MainModule {
 

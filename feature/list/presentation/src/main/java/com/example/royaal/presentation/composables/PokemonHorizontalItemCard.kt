@@ -54,7 +54,7 @@ internal fun SharedTransitionScope.PokemonHorizontalItemCard(
     val initColor = MaterialTheme.colorScheme.primary
     val targetColor = MaterialTheme.colorScheme.onPrimary
     val iconTint = remember { androidx.compose.animation.Animatable(initColor) }
-    val screenHeight = LocalConfiguration.current.screenHeightDp
+    LocalConfiguration.current.screenHeightDp
     Card(
         modifier = modifier
             .fillMaxWidth()

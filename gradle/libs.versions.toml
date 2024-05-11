@@ -2,15 +2,15 @@
 androidGradlePlugin = "8.3.2"
 androidxActivity = "1.9.0"
 androidxAppCompat = "1.6.1"
-androidxComposeBom = "2024.04.01"
+androidxComposeBom = "2024.05.00"
 androidxComposeCompiler = "1.5.11"
 androidxCore = "1.13.1"
-androidxDataStore = "1.1.0"
+androidxDataStore = "1.1.1"
 androidxLifecycle = "2.7.0"
 androidxNavigation = "2.7.7"
 coil = "2.6.0"
 kotlin = "1.9.23"
-kotlinxCoroutines = "1.8.0"
+kotlinxCoroutines = "1.8.1-Beta"
 kotlinxSerializationJson = "1.6.3"
 ksp = "1.9.23-1.0.20"
 okhttp = "4.12.0"
@@ -20,14 +20,10 @@ splash = "1.0.1"
 org-jetbrains-kotlin-android = "1.9.23"
 material3 = "1.2.1"
 dagger = "2.50"
-material = "1.11.0"
 retrofit-serialization = "1.0.0"
 uiTextGoogleFonts = "1.6.7"
 composeUi = "1.7.0-alpha08"
 glide = "1.0.0-beta01"
-junit = "4.13.2"
-junitVersion = "1.1.5"
-espressoCore = "3.5.1"
 
 [libraries]
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivity" }
@@ -51,8 +47,6 @@ androidx-lifecycle-viewModelCompose = { group = "androidx.lifecycle", name = "li
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
 coil-kt = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
 coil-kt-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
-kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk8", version.ref = "kotlin" }
-kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
@@ -60,15 +54,11 @@ room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "
 dagger-kt = { group = "com.google.dagger", name = "dagger", version.ref = "dagger" }
 dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger" }
 coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 retrofit-serialization = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "retrofit-serialization" }
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
 androidx-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "uiTextGoogleFonts" }
 glide = { module = "com.github.bumptech.glide:compose", version.ref = "glide" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }

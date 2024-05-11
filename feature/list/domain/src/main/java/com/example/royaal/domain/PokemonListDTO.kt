@@ -7,15 +7,4 @@ data class PokemonListDTO(
     val shinyPoster: String?,
     val isOwned: Boolean,
     val stats: PokemonListStatsDTO,
-) {
-    companion object {
-        val placeholder = PokemonListDTO(
-            name = "???",
-            id = -1,
-            defaultPoster = null,
-            shinyPoster = null,
-            isOwned = false,
-            stats = PokemonListStatsDTO.placeholder
-        )
-    }
-}
+)

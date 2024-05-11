@@ -22,6 +22,4 @@ fun PokemonEntity.toPokemonDTO() = PokemonDTO(
     stats = stats.toStatsDTO()
 )
 
-fun List<PokemonEntity>.toPokemonDtoList() = map { it.toPokemonDTO() }
-
 fun Flow<PokemonEntity?>.asDto() = map { it?.toPokemonDTO() }
