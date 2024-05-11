@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="try_again" translatable="false">Try again!</string>
+    <string name="list_screen_error" translatable="false">Something went wrong</string>
+    <string name="back_to_list">Back to list</string>
+    <string name="ef_title">+%1$d EVs</string>
+    <string name="request_new_pokemons">Load more</string>
+</resources>

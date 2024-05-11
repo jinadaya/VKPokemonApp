@@ -1,14 +1,17 @@
 package com.example.royaal.vkpokemonapp.di
 
 import android.app.Application
-import com.example.royaal.vkpokemonapp.database.DatabaseModule
-import com.example.royaal.vkpokemonapp.details.api.PokemonDetailsRepositoryProvider
-import com.example.royaal.vkpokemonapp.details.presentation.DetailsModule
-import com.example.royaal.vkpokemonapp.list_screen.api.PokemonMainRepositoryProvider
-import com.example.royaal.vkpokemonapp.list_screen.presentation.MainModule
+import com.example.royaal.api.PokemonDetailsRepositoryProvider
+import com.example.royaal.api.PokemonMainRepositoryProvider
+import com.example.royaal.common.di.DatabaseProvider
+import com.example.royaal.common.di.Destinations
+import com.example.royaal.common.di.NetworkProvider
+import com.example.royaal.data.di.DetailsModule
+import com.example.royaal.data.di.MainModule
+import com.example.royaal.database.di.DatabaseModule
+import com.example.royaal.foundation.di.AppScope
+import com.example.royaal.network.di.NetworkModule
 import com.example.royaal.vkpokemonapp.navigation.NavigationModule
-import com.example.royaal.vkpokemonapp.network.di.NetworkModule
-import com.example.royaal.vkpokemonapp.utils.Destinations
 import dagger.BindsInstance
 import dagger.Component
 
@@ -24,7 +27,9 @@ import dagger.Component
 )
 interface AppComponent :
     PokemonMainRepositoryProvider,
-    PokemonDetailsRepositoryProvider {
+    PokemonDetailsRepositoryProvider,
+    NetworkProvider,
+    DatabaseProvider {
 
     @Component.Factory
     interface Factory {

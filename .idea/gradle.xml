@@ -10,6 +10,22 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/common" />
+            <option value="$PROJECT_DIR$/core/database" />
+            <option value="$PROJECT_DIR$/core/foundation" />
+            <option value="$PROJECT_DIR$/core/network" />
+            <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/detail" />
+            <option value="$PROJECT_DIR$/feature/detail/api" />
+            <option value="$PROJECT_DIR$/feature/detail/data" />
+            <option value="$PROJECT_DIR$/feature/detail/domain" />
+            <option value="$PROJECT_DIR$/feature/detail/presentation" />
+            <option value="$PROJECT_DIR$/feature/list" />
+            <option value="$PROJECT_DIR$/feature/list/api" />
+            <option value="$PROJECT_DIR$/feature/list/data" />
+            <option value="$PROJECT_DIR$/feature/list/domain" />
+            <option value="$PROJECT_DIR$/feature/list/presentation" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

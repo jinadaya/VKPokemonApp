@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="list_screen_error" translatable="false">Something went wrong</string>
+    <string name="request_new_pokemons">Load more</string>
+</resources>

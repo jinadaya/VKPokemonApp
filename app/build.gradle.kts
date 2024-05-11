@@ -1,14 +1,9 @@
-import java.util.Properties
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.serialization)
 }
-
-val properties = Properties()
-properties.load(project.rootProject.file("app/values.properties").inputStream())
 
 android {
     namespace = "com.example.royaal.vkpokemonapp"
@@ -28,11 +23,7 @@ android {
     }
 
     buildTypes {
-        debug {
-            buildConfigField("String", "BASE_URL", properties.getProperty("baseUrl"))
-        }
         release {
-            buildConfigField("String", "BASE_URL", properties.getProperty("baseUrl"))
             isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -83,4 +74,18 @@ dependencies {
     //DI
     implementation(libs.dagger.kt)
     ksp(libs.dagger.compiler)
+
+    //Project
+    implementation(project(":core:common"))
+    implementation(project(":core:network"))
+    implementation(project(":core:foundation"))
+    implementation(project(":core:database"))
+    implementation(project(":feature:detail:api"))
+    implementation(project(":feature:detail:presentation"))
+    implementation(project(":feature:detail:data"))
+    implementation(project(":feature:detail:domain"))
+    implementation(project(":feature:list:api"))
+    implementation(project(":feature:list:presentation"))
+    implementation(project(":feature:list:data"))
+    implementation(project(":feature:list:domain"))
 }

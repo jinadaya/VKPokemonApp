@@ -6,9 +6,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import com.example.royaal.vkpokemonapp.list_screen.api.ListEntry
-import com.example.royaal.vkpokemonapp.utils.Destinations
-import com.example.royaal.vkpokemonapp.utils.find
+import com.example.royaal.api.ListEntry
+import com.example.royaal.common.di.Destinations
+import com.example.royaal.common.di.find
 
 @OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
