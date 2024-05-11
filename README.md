@@ -9,15 +9,17 @@
 
 ## Preview
 
-<img src="https://github.com/jinadaya/VKPokemonApp/assets/124443832/971e63f9-6766-47b5-ab63-bd5bcdba849b" width="200" height="400" />
+<img src="https://github.com/jinadaya/VKPokemonApp/assets/124443832/971e63f9-6766-47b5-ab63-bd5bcdba849b" width="200" height="500" />
 
-<img src="https://github.com/jinadaya/VKPokemonApp/assets/124443832/868c3299-fbb8-4c24-8c6b-851e26a15767" width="200" height="400" />
+<img src="https://github.com/jinadaya/VKPokemonApp/assets/124443832/868c3299-fbb8-4c24-8c6b-851e26a15767" width="200" height="500" />
 
-<img src="https://github.com/jinadaya/VKPokemonApp/assets/124443832/d4bc274b-2125-402e-a587-34660beed78c" width="200" height="400" />
+<img src="https://github.com/jinadaya/VKPokemonApp/assets/124443832/d4bc274b-2125-402e-a587-34660beed78c" width="200" height="500" />
 
-<img src="https://github.com/jinadaya/VKPokemonApp/assets/124443832/3b88abdf-1f97-44cd-a0ab-ddf77472e389" width="200" height="400" />
+<img src="https://github.com/jinadaya/VKPokemonApp/assets/124443832/3b88abdf-1f97-44cd-a0ab-ddf77472e389" width="200" height="500" />
 
-https://github.com/jinadaya/VKPokemonApp/assets/124443832/a72f15b2-c0ab-4801-acad-c47e52f52cff
+https://github.com/jinadaya/VKPokemonApp/assets/124443832/84d44985-37a1-47fb-9f28-8673511cc725
+
+
 
 
 
@@ -38,10 +40,24 @@ https://github.com/jinadaya/VKPokemonApp/assets/124443832/a72f15b2-c0ab-4801-aca
 
  * It can show you pokemon and its shiny version
 
- * This app can show you pokemon stats and EVs for each stat
+ * It can show you pokemon stats and EVs for each stat
 
  * It can track your progress in collectiong pokemons
 
  * It can store your data in offline regime and cahce images with pokemon data
 
  * It can load data by sequences and save you mobile data
+
+ * It can show you small dialog with stats if you long tap on pokemon card on portrait mode
+
+ * It is optimised for portrait and landscape orientations
+
+## What this app can't do
+
+  * It can not let you pet your pokemon
+
+  * It can not let you play any of Pokemon Games
+
+  * It can not launch rocket in space (sadly)
+
+##### P.S. У меня только с VPN картинки грузило. Так что если там долгое время покебол висит, нужно попробовать впн подключить.
