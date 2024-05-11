@@ -89,75 +89,77 @@ internal fun SharedTransitionScope.SuccessScreen(
     }
 
     if (pokemons().isEmpty()) Button(
-        modifier = Modifier.fillMaxWidth(0.8f),
-        onClick = onRequestForNewPokemons
+        modifier = Modifier.fillMaxWidth(0.8f), onClick = onRequestForNewPokemons
     ) {
         Text(text = stringResource(id = R.string.request_new_pokemons))
-    }
-    else if (orientation == ORIENTATION_PORTRAIT) LazyColumn(
-        modifier = modifier, contentPadding = PaddingValues(top = 32.dp), state = scrollState
-    ) {
-        items(count = pokemons().size, key = {
-            pokemons()[it].id
-        }, contentType = {
-            pokemons()[it]
-        }) { index ->
-            val pokemon = pokemons()[index]
-            PokemonVerticalItemCard(
-                modifier = Modifier
-                    .padding(4.dp)
-                    .combinedClickable(
-                        onLongClick = {
+    } else if (orientation == ORIENTATION_PORTRAIT)
+        LazyColumn(
+            modifier = modifier,
+            contentPadding = PaddingValues(top = 32.dp),
+            state = scrollState
+        ) {
+            items(count = pokemons().size, key = {
+                pokemons()[it].id
+            }, contentType = {
+                pokemons()[it]
+            }) { index ->
+                val pokemon = pokemons()[index]
+                PokemonVerticalItemCard(
+                    modifier = Modifier
+                        .padding(4.dp)
+                        .combinedClickable(onLongClick = {
                             selectedPokemon = index
                             showStatsDialog = true
-                        },
-                        onClick = {
+                        }, onClick = {
                             onPokemonClick(pokemon.id)
                         }),
-                name = pokemon.name,
-                id = pokemon.id,
-                default = pokemon.defaultPoster,
-                shiny = pokemon.shinyPoster,
-                isOwned = pokemon.isOwned,
-                onOwnedClick = { isOwned ->
-                    onOwnedClick(pokemon.id, isOwned)
-                },
-                animatedVisibilityScope = animatedVisibilityScope,
-            )
-        }
-    } else LazyColumn(
-        state = scrollState,
-    ) {
-        items(count = pokemons().size / 2, key = {
-            pokemons()[it].id
-        }, contentType = {
-            pokemons()[it]
-        }) { index ->
-            val pokemon = pokemons()[index]
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                PokemonHorizontalItemCard(
-                    modifier = Modifier
-                        .weight(1f)
-                        .padding(4.dp)
-                        .clickable {
-                            onPokemonClick(pokemon.id)
-                        },
                     name = pokemon.name,
                     id = pokemon.id,
-                    shiny = pokemon.shinyPoster,
                     default = pokemon.defaultPoster,
+                    shiny = pokemon.shinyPoster,
                     isOwned = pokemon.isOwned,
                     onOwnedClick = { isOwned ->
                         onOwnedClick(pokemon.id, isOwned)
                     },
-                    onPokemonClick = onPokemonClick,
                     animatedVisibilityScope = animatedVisibilityScope,
-                    stats = pokemon.stats,
                 )
             }
         }
-    }
+    else
+        LazyColumn(
+            modifier = modifier,
+            state = scrollState,
+        ) {
+            items(count = pokemons().size / 2, key = {
+                pokemons()[it].id
+            }, contentType = {
+                pokemons()[it]
+            }) { index ->
+                val pokemon = pokemons()[index]
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    PokemonHorizontalItemCard(
+                        modifier = Modifier
+                            .weight(1f)
+                            .padding(4.dp)
+                            .clickable {
+                                onPokemonClick(pokemon.id)
+                            },
+                        name = pokemon.name,
+                        id = pokemon.id,
+                        shiny = pokemon.shinyPoster,
+                        default = pokemon.defaultPoster,
+                        isOwned = pokemon.isOwned,
+                        onOwnedClick = { isOwned ->
+                            onOwnedClick(pokemon.id, isOwned)
+                        },
+                        onPokemonClick = onPokemonClick,
+                        animatedVisibilityScope = animatedVisibilityScope,
+                        stats = pokemon.stats,
+                    )
+                }
+            }
+        }
 }

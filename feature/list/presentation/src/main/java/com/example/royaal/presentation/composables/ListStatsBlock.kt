@@ -62,7 +62,7 @@ private fun StatRow(
     }
     Card(
         modifier = modifier.fillMaxWidth().padding(vertical = 2.dp),
-        shape = RoundedCornerShape(8.dp),
+        shape = RoundedCornerShape(4.dp),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.inversePrimary
         )
@@ -75,7 +75,7 @@ private fun StatRow(
         Box(
             modifier = Modifier
                 .height(12.dp)
-                .padding(2.dp)
+                .padding(4.dp)
                 .fillMaxWidth(currValue.value)
                 .background(
                     shape = RoundedCornerShape(18.dp),
