@@ -1,10 +1,7 @@
 
-# MyGameCollection
+# Pokemon
 
 ### Under active development
-
-Idea: I just wanted to check all games that I ever played, completed or that I want at the moment, but there was no any good application to achieve all my needs.
-So i decided to make my own because I able to do it and want it. So here it is!
 
 - UI is fully implemented in Jetpack Compose
 - DI is made with pure Dagger, so no Hilt and anything like that.
